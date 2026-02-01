@@ -1,0 +1,18 @@
+# Build artifacts
+/target
+
+# Coverage reports
+/coverage
+*.profraw
+cobertura.xml
+tarpaulin-report.html
+
+# IDE files
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db

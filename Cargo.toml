@@ -1,0 +1,29 @@
+[package]
+name = "rust-payments-engine"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+csv = "1.4"
+serde = { version = "1.0", features = ["derive"] }
+rust_decimal = "1.40"
+clap = { version = "4.5", features = ["derive"] }
+thiserror = "2.0"
+
+# Async dependencies (always available)
+tokio = { version = "1.49", features = ["fs", "rt-multi-thread"] }
+tokio-util = { version = "0.7", features = ["compat"] }
+csv-async = { version = "1.3" }
+futures = { version = "0.3" }
+dashmap = { version = "7.0.0-rc2" }
+num_cpus = { version = "1.17" }
+
+[dev-dependencies]
+rstest = "0.26"
+tempfile = "3.24"
+divan = "0.1"
+tokio = { version = "1.49", features = ["macros", "rt-multi-thread"] }
+
+[[bench]]
+name = "parsing_strategies"
+harness = false
